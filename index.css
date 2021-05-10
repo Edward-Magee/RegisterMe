@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body, html {
+   --black: #1C1C1C;
+
+   width: 100vw;
+   height: 100vh;
+   background-color: var(--black);
+   padding: 0;
+   margin: 0;
+   overflow: hidden;
+}
+
+* {
+   font-family: "Roboto";
+   font-weight: 500;
+}
+.hidden {
+   display: none !important;
+}
+
+h2 {
+   text-align: center;
+   font-size: 2rem;
+   color: #fff;
+   margin-top: 5%;
+   pointer-events: none;
+}
+
+#result-container {
+   background-color: #333;
+   margin-top: 10%;
+   margin-left: 50%;
+   padding: 0.5rem 1rem 0.75rem;
+   transform: translate(-50%, -50%);
+   display: inline-block;
+   box-shadow: 0 0 10px 1px var(--black) inset;
+}
+#result-container h3 {
+   font-size: 1.1rem;
+   color: #fff;
+   text-align: center;
+   margin: 0 0 0.7rem 0;
+}
+#result-container div {
+   --height: 1.25rem;
+   color: #fff;
+   text-align: center;
+   min-width: 5rem;
+   height: var(--height);
+   background-color: var(--black);
+   padding: 0 0.2rem;
+   border: 2px solid #ccc;
+   line-height: var(--height);
+}
+#result-container div:first-child {
+   font-weight: 400;
+}
+#result-container div:not(:last-child) {
+   margin-bottom: 0.5rem;
+}
+
+.button-container {
+   display: inline-block;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.button-container button {
+   font-size: 1.1rem;
+   box-shadow: 0 0 0 6px var(--black), 0 0 0 6.5px #888;
+   padding: 0.5rem 2rem;
+}
+button {
+   min-width: 5rem;
+   color: #fff;
+   text-transform: uppercase;
+   white-space: nowrap;
+   outline: none;
+   cursor: pointer;
+   background-color: transparent;
+   border: 2px solid #bbb;
+   display: block;
+   margin-left: 50%;
+   transform: translateX(-50%);
+}
+button:hover {
+   color: #000;
+   background-color: #fff;
+   border-color: #fff;
+   transition: 0.1s all ease-in-out;
+   box-shadow: none;
+}
+button:active {
+   color: #fff;
+   background-color: transparent;
+}
+button:not(:last-child) {
+   margin-bottom: 1.5rem;
+}
+
+#enter-key {
+   position: absolute;
+   bottom: 15%;
+   left: 50%;
+   transform: translate(-50%, 50%);
+}
+#enter-key h3 {
+   color: #fff;
+   text-align: center;
+   margin: 0 0 0.4rem;
+}
+#enter-key input {
+   color: #fff;
+   background-color: transparent;
+   padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+   border: 2px solid #bbb;
+   border-radius: 2px;
+   outline: none;
+}
+#enter-key input:focus {
+   border-color: rgb(62, 139, 255);
+}
+#enter-key input::placeholder {
+   color: #888;
+}
+#key-input {
+   font-size: 1rem;
+   padding: 0.3rem 1rem;
+   margin-top: 0.5rem;
+}
