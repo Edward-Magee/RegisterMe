@@ -20,21 +20,14 @@ window.onload = () => {
 
 function displayInput() {
    const container = getElement("enter-key");
-   const isHidden = container.classList.contains("hidden");
-   if (isHidden) {
-      container.classList.remove("hidden");
-   } else {
-      container.classList.add("hidden");
-   }
+   container.classList.contains("hidden") ? container.classList.remove("hidden") : container.classList.add("hidden");
 }
 
 function getRandomName() {
    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
    const nameLength = randInt(0, config._LENGTH);
    let result = "";
-   for (let i = 0; i < nameLength; i++) {
-      result += characters.split("")[randInt(0, characters.length)];
-   }
+   for (let i = 0; i < nameLength; i++) result += characters.split("")[randInt(0, characters.length)];
 
    console.log(`%c ${result}`, "color: red");
    return result;
