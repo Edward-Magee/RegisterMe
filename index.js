@@ -24,7 +24,7 @@ function displayInput() {
 }
 
 function getRandomName() {
-   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()";
+   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+{}|:<>?-=[];',./'";
    const nameLength = randInt(5, config._LENGTH);
    let result = "";
    for (let i = 0; i < nameLength; i++) result += characters.split("")[randInt(0, characters.length)];
