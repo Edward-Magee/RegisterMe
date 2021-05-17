@@ -16,6 +16,7 @@ window.onload = () => {
    getElement("generate-name").addEventListener("click", () => displayInput());
    getElement("generate-random").addEventListener("click", () => generateKey(getRandomName()));
    getElement("key-input").addEventListener("click", () => generateKey(getElement("key-text-field").value));
+   getElement("generate-username").addEventListener("click", () => generateUsername());
 }
 
 function displayInput() {
@@ -24,7 +25,7 @@ function displayInput() {
 }
 
 function getRandomName() {
-   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+{}|:<>?-=[];',./'";
+   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+{}|:<>?-=[];',./'`";
    const nameLength = randInt(5, config._LENGTH);
    let result = "";
    for (let i = 0; i < nameLength; i++) result += characters.split("")[randInt(0, characters.length)];
@@ -33,9 +34,23 @@ function getRandomName() {
    return result;
 }
 
+var username = 900914;
+
+function generateUsername() {
+   const name = getElement("username-input").value;
+
+   let a = 0;
+   name.split("").forEach((value) => {
+      a += 100000; // 186A0
+      a += value.charCodeAt(0);
+   });
+   // a += 31337; // 7A69
+   username = a;
+}
+
 function generateKey(name) {
    // GET THE KEY
-   let key = 900914; // DBF32
+   let key = username; // DBF32
    name.split("").forEach((value) => {
       key += 100000; // 186A0
       key += value.charCodeAt(0);
